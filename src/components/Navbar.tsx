@@ -46,7 +46,7 @@ export default function Navbar(): JSX.Element {
           boxShadow: !open && scrollDown ? "0px 3px 20px 1px #171717" : "none", // Add shadow when scrolling down
           border: !open && scrollDown ? "1px solid #171717" : "1px solid black",
         }}
-        className={`bg-black fixed md:top-6 top-4 container w-11/12 lg:rounded-2xl rounded-md px-2 flex items-center justify-between shadow-neutral-900`}
+        className={`bg-black fixed md:top-6 z-50 top-4 container w-11/12 lg:rounded-2xl rounded-md px-2 flex items-center justify-between shadow-neutral-900`}
       >
         {/* Logo */}
         <Link href="/" className="ml-2">

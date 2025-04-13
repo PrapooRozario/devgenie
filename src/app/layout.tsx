@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import { geistMono, geistSans } from "./utils/fonts";
+import BottomBlur from "@/components/BottomBlur";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,11 +19,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <main className="bg-black h-[3000px]">
+        <main className="bg-black h-screen">
           <main className="container w-11/12 mx-auto md:py-6 py-4">
             <Navbar />
             {children}
-            <Footer />
+            <BottomBlur />
           </main>
         </main>
       </body>

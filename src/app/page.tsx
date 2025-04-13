@@ -3,7 +3,7 @@ import React, { JSX } from "react";
 
 export default function page(): JSX.Element {
   return (
-    <main className="md:mt-40 mt-30">
+    <main className="md:mt-40 mt-30 space-y-28">
       <Hero />
     </main>
   );

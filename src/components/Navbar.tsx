@@ -17,8 +17,7 @@ export default function Navbar(): JSX.Element {
   }
   const links: NavLink[] = [
     { href: "/", name: "HOME" },
-    { href: "/features", name: "FEATURES" },
-    { href: "/howitworks", name: "HOW IT WORKS" },
+    { href: "/fixcode", name: "FIX CODE" },
     { href: "/pricing", name: "PRICING" },
   ];
 
@@ -44,9 +43,9 @@ export default function Navbar(): JSX.Element {
         animate={{
           paddingBottom: width < 295 ? 380 : open ? 320 : 0, // Adjust padding for small screens
           boxShadow: !open && scrollDown ? "0px 3px 20px 1px #171717" : "none", // Add shadow when scrolling down
-          border: !open && scrollDown ? "1px solid #171717" : "1px solid black",
+          border: !open && scrollDown ? "1px solid #171717" : "1px solid transparent", 
         }}
-        className={`bg-black fixed md:top-6 z-50 top-4 container w-11/12 lg:rounded-2xl rounded-md px-2 flex items-center justify-between shadow-neutral-900`}
+        className={`fixed md:top-6 z-50 top-4 container w-11/12 lg:rounded-2xl rounded-md px-2 flex items-center justify-between shadow-neutral-900`}
       >
         {/* Logo */}
         <Link href="/" className="ml-2">
@@ -117,7 +116,7 @@ export default function Navbar(): JSX.Element {
             type: "spring",
             stiffness: 300,
             damping: 20,
-            delay: open ? 0.1 : 0,
+            delay: open ? 0.15 : 0,
           }}
           className={`lg:hidden absolute top-14 left-4`}
         >
